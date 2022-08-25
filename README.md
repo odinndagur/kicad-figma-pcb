@@ -1,2 +1,0 @@
-# kicad-figma-pcb
- 
