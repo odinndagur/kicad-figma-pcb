@@ -1,6 +1,8 @@
 # Stylized PCBs in KiCad using Figma
 *Using Thea Flowers' wonderful Gingerbread utilities with Figma generated SVGs*
 
+<img src="images/example_pcb.png" width=600px align="center">
+
 **TL;DR**
 ---
 1. Create design
@@ -13,15 +15,13 @@
 8. python3 -m gingerbread.convert filename.svg -> kicad_pcb
 ---
 
-As soon as I saw Thea had released her utilities for generating KiCad PCBs from Affinity Designer I knew I had to test it out with Figma (since I don't have Affinity but occasionally use Figma). Here are the steps I took to get this result:
-
-![PCB with an image of Iceland and drilled out holes for swimming pools in Iceland](images/example_pcb.png)
+As soon as I saw Thea had released her utilities for generating KiCad PCBs from Affinity Designer I knew I had to test it out with Figma (since I don't have Affinity but occasionally use Figma). Here are the steps I took to get the above result:
 
 Gingerbread.convert searches for each layer by their ID. If you check *'Include "id" attribute'* in the export options each layer's name is set as its id in the svg.
 
-![Figma export menu](images/figma_include_id.png)
 
-![Figma layer names](images/figma_layers.png)
+<span><img src="images/figma_include_id.png" width=300>
+<img src="images/figma_layers.png" width=300></span>
 
 Each layer can be a group so as long as the name matches you can use it to organize your design. Drills have to be circles (ellipses with width == height are exported as circle), text should be flattened to paths etc but otherwise you are pretty free to design however.
 
